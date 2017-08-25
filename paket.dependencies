@@ -1,0 +1,14 @@
+framework: net452
+
+source https://www.nuget.org/api/v2
+
+nuget Fake
+nuget FSharp.Data
+nuget ReactiveUI
+nuget ReactiveUI-Core
+nuget Rx-Core ~> 2.2.5
+nuget Rx-PlatformServices ~> 2.2.5
+nuget MahApps.Metro
+nuget Serilog
+nuget Serilog.Sinks.ColoredConsole
+nuget DryIoc.dll
