@@ -1,3 +1,6 @@
+Serilog
+Serilog.Sinks.ColoredConsole
+FSharp.Core
 MahApps.Metro
 DryIoc.dll
 ReactiveUI

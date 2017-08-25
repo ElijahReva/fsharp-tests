@@ -3,12 +3,19 @@
     using System.Collections.Generic;
     using System.Linq;
     using ReactiveUI;
-    public class ShellViewModel: ReactiveObject
+    using Serilog;
+    using System.Reactive;
+
+    public class ShellViewModel : ReactiveObject
     {
-        public ShellViewModel(IEnumerable<ITab> tabs)
+        ILogger logger;
+        public ShellViewModel(IEnumerable<ITab> tabs, ILogger logger)
         {
             this.Tabs = tabs;
+            this.logger = logger;
             this.CurrentScreen = tabs.First();
+            var log = this.WhenAnyValue(x => x.CurrentScreen);
+            log.Subscribe(Observer.Create<ITab>(x => this.logger.Debug("{@Data}", x), _ => { }, () => { }));
         }
 
         public IEnumerable<ITab> Tabs { get; set; }

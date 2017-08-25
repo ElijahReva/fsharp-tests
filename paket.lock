@@ -3,6 +3,7 @@ NUGET
   remote: https://www.nuget.org/api/v2
     DryIoc.dll (2.11.6)
     FAKE (4.63)
+    FSharp.Core (4.2.3)
     FSharp.Data (2.3.3)
     MahApps.Metro (1.5)
     reactiveui (7.4)

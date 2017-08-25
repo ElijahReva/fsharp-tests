@@ -3,6 +3,7 @@ framework: net452
 source https://www.nuget.org/api/v2
 
 nuget Fake
+nuget FSharp.Core
 nuget FSharp.Data
 nuget ReactiveUI
 nuget ReactiveUI-Core

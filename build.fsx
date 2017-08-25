@@ -2,8 +2,6 @@
 #r @"packages\FAKE\tools\FakeLib.dll"
 open Fake
 
-EnvironmentHelper.setBuildParam "VisualStudioVersion" "14.0"
-
 let buildDir = "./build/"
 
 let buildMode = getBuildParamOrDefault "buildMode" "Release"
